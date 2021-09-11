@@ -1,25 +1,43 @@
 import * as React from "react";
 
 import styles from "./App.module.scss";
+import Server from "./Server";
 
 const App: React.FC = () => {
-  return (
-    <main className={styles.container}>
-      <div className="window" style={{width: 320, margin: "auto"}}>
-        <div className="title-bar">
-          <div className="title-bar-text">Innovid challenge</div>
-          <div className="title-bar-controls">
-            <button aria-label="Minimize" />
-            <button aria-label="Maximize" />
-            <button aria-label="Close" />
-          </div>
-        </div>
-        <div className="window-body">
-          <p>Lets get this party started!</p>
-        </div>
-      </div>
-    </main>
-  );
+    const generateServers = (quantity: number) => {
+        const servers: JSX.Element[] = [];
+        for (let index = 0; index < quantity; index++) {
+            servers.push(<Server index={index + 1} key={"s" + index} />);
+        }
+
+        return servers;
+    };
+
+    const servers = generateServers(4);
+
+    return (
+        <main
+            className={styles.container}
+            style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+            }}
+        >
+            <div className={styles.serversContainer}>{servers}</div>
+            <div className={styles.subTitle}>
+                Visit the repo of this project{" "}
+                <a
+                    href="https://github.com/andresmarpz/innovid-challenge"
+                    target="_blank"
+                >
+                    here
+                </a>
+                !
+            </div>
+        </main>
+    );
 };
 
 export default App;

@@ -1,5 +1,22 @@
 // Container
 .container {
-  width: 100%;
-  max-width: 1024px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.serversContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 10px;
+    margin: auto;
+}
+
+.subTitle {
+    margin-top: 2rem;
+    color: white;
+    font-size: large;
+    font-family: "Pixelated MS Sans Serif";
 }

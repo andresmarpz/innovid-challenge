@@ -12,7 +12,7 @@ const Server = (props: { index: number }) => {
 
     const fetchUsage = () => {
         axios.get(`http://localhost:8000/status/${props.index}`).then((res) => {
-            setUsage(res.data.load);
+            if (status) setUsage(res.data.load);
 
             console.log(`updating ${props.index} with ${res.data.load}`);
         });
@@ -28,7 +28,7 @@ const Server = (props: { index: number }) => {
     }, [status]);
 
     const toggleStatus = () => {
-        setStatus((oldStatus) => !oldStatus);
+        setStatus(!status);
     };
 
     return (
@@ -43,10 +43,13 @@ const Server = (props: { index: number }) => {
                 <img src={status ? pcOn : pcOff} width={200} height={150} />
             </div>
             <div className="status-bar" style={{ display: "flex" }}>
-                <div className="status-bar-field" style={{ flexBasis: "33%" }}>
+                <div
+                    className="status-bar-field center"
+                    style={{ flexBasis: "33%" }}
+                >
                     Status: {`${status}`}
                 </div>
-                <div
+                <button
                     className="status-bar-field"
                     style={{
                         cursor: "default",
@@ -56,9 +59,14 @@ const Server = (props: { index: number }) => {
                     onClick={() => toggleStatus()}
                 >
                     {status ? "shut down" : "turn on"}
-                </div>
-                <div className="status-bar-field" style={{ flexBasis: "33%" }}>
-                    CPU Usage: {usage}%
+                </button>
+                <div
+                    className={"status-bar-field center"}
+                    style={{
+                        flexBasis: "33%",
+                    }}
+                >
+                    CPU Usage: {status ? usage : 0}%
                 </div>
             </div>
         </div>

@@ -2,9 +2,9 @@
     "name": "@innovid-challenge/client",
     "version": "0.0.0",
     "scripts": {
-        "dev": "vite",
+        "start": "vite",
         "build": "tsc && vite build",
-        "serve": "vite preview --host"
+        "serve": "vite preview"
     },
     "dependencies": {
         "98.css": "^0.1.17",

@@ -1,14 +1,14 @@
 {
-  "name": "@innovid-challenge/hub",
-  "license": "MIT",
-  "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "start": "lerna run start --parallel --stream"
-  },
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
-  "dependencies": {
-    "axios": "^0.21.4"
-  }
+	"name": "@innovid-challenge/hub",
+	"license": "MIT",
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"start": "lerna run start --parallel --stream"
+	},
+	"devDependencies": {
+		"lerna": "^3.22.1"
+	},
+	"dependencies": {
+		"axios": "^0.21.4"
+	}
 }

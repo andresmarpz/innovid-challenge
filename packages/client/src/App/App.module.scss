@@ -12,6 +12,17 @@
     width: 90%;
     gap: 10px;
     margin: auto;
+    padding: 2rem;
+}
+
+.windowContainer {
+    margin: 2rem;
+}
+
+.controlsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .subTitle {
@@ -19,4 +30,9 @@
     color: white;
     font-size: large;
     font-family: "Pixelated MS Sans Serif";
+    padding-bottom: 1rem;
+}
+
+.text-red {
+    color: red !important;
 }

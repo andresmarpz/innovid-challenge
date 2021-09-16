@@ -5,10 +5,13 @@ import App from "./App";
 
 import "98.css";
 import "./theme.css";
+import { StoreJSX } from "./management/Store";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root"),
+    <React.StrictMode>
+        <StoreJSX>
+            <App />
+        </StoreJSX>
+    </React.StrictMode>,
+    document.getElementById("root")
 );

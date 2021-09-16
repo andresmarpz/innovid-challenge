@@ -5,6 +5,8 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    background-color: #017d80;
 }
 
 #root {
@@ -16,6 +18,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #222;
+    min-width: 420px;
 }
 
 * {

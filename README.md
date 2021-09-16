@@ -40,6 +40,6 @@ npm start
 
 ## Contacto
 
-Twitch: andresmarpz
-Discord: andresmarpz#6441
-Contacto: [LinkedIn](https://linkedin.com/in/andresmarpz) / andresmarpz@gmail.com
+> Twitch: andresmarpz
+> Discord: andresmarpz#6441
+> Contacto: [LinkedIn](https://linkedin.com/in/andresmarpz) / andresmarpz@gmail.com
